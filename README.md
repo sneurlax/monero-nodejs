@@ -1,8 +1,8 @@
 # monero-nodejs
 
-A Node.js wallet manager for interacting with Monero's simplewallet over JSON-RPC. 
+A Node.js wrapper for `monero-wallet-rpc`
 
-For more information about Monero, visit: https://getmonero.org/home
+For more information about Monero, visit: https://getmonero.org/
 
 Donations:
 
@@ -34,7 +34,7 @@ Create a new instance of the wallet:
 var Wallet = new moneroWallet();
 ```
 
-This creates a wallet using the following simplewallet default RPC settings:
+This creates a wallet using the following `monero-wallet-rpc` default RPC settings:
    
 * `hostname` - '127.0.0.1'
 * `port` - 18082
@@ -79,12 +79,26 @@ Parameters:
 * `password` - Password of wallet file to create (*string*)
 * `language` - Language to use for wallet mnemonic seed (*string*)
 
+### openWallet
+Usage:
+
+```
+wallet.openWallet(filename, password);
+```
+
+Opens a wallet file.  Returns an empty object if successful.  Used when monero-wallet-rpc is started without a wallet file specified.
+
 Example response:
 
 ```
 {}
 ```
 
+Example error response:
+
+```
+{ code: -1, message: 'Failed to open wallet' }
+```
 ### balance
 Usage:
 
