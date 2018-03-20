@@ -64,6 +64,21 @@ To run the tests, clone the repository and then:
 
 ## Wallet Methods
 
+### createWallet
+Usage:
+
+```
+wallet.createWallet(filename, password);
+```
+
+Creates a wallet file.  Returns an empty object if successful.
+
+Parameters:
+
+* `filename` - Filename of wallet file to create (*string*)
+* `password` - Password of wallet file to create (*string*)
+* `language` - Language to use for wallet mnemonic seed (*string*)
+
 ### openWallet
 Usage:
 
@@ -84,7 +99,6 @@ Example error response:
 ```
 { code: -1, message: 'Failed to open wallet' }
 ```
-
 ### balance
 Usage:
 
