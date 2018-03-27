@@ -1,3 +1,7 @@
+### Use [sneurlax/moneronodejs](https://github.com/sneurlax/moneronodejs) or [monero-integrations/moneronodejs](https://github.com/monero-integrations/moneronodejs) instead of this repository for a current (0.12.0.0 "Lithium Luna") library and daemon RPC methods.
+
+---
+
 # monero-nodejs
 
 A Node.js wallet manager for interacting with Monero's simplewallet over JSON-RPC. 
